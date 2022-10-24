@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+                background-image: url('loginpic.jpg');
+             }
+    </style>
+</head>
+<body>
+<h1 align="center">Login</h1>
+    <form action="login" method="post" >
+            {% csrf_token %}
+        <input type="text" name="Username" placeholder="enter user name"><br>
+        <input type="password" name="Password" placeholder="enter password"><br>
+        <input type="submit">
+    </form>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+</body>
+</html>
